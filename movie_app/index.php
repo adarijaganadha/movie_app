@@ -1,6 +1,6 @@
 <?php
-include 'db/config.php'; // Include DB connection
-include 'db/movie_db.php'; // Include movie DB functions
+include 'db/config.php';
+include 'db/movie_db.php';
 
 // Fetch all movies
 $movies = get_all_movies();
@@ -38,7 +38,8 @@ $movies = get_all_movies();
             </div>
         <?php endforeach; ?>
     </div>
-    
+
     <div id="mode-toggle" onclick="toggleMode()">🌙</div> <!-- Toggle mode button -->
 </body>
 </html>
+
