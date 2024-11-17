@@ -2,7 +2,7 @@
 include 'db/config.php'; // Include DB connection
 include 'db/movie_db.php'; // Include movie DB functions
 
-// Fetch movies for display
+// Fetch all movies
 $movies = get_all_movies();
 ?>
 
@@ -11,8 +11,9 @@ $movies = get_all_movies();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Tollywood Romantic Movies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <div id="navbar">
@@ -24,7 +25,7 @@ $movies = get_all_movies();
             </div>
         </div>
     </div>
-    
+
     <div class="movie-list">
         <?php foreach ($movies as $movie): ?>
             <div class="movie-item">
@@ -37,7 +38,7 @@ $movies = get_all_movies();
             </div>
         <?php endforeach; ?>
     </div>
-
-    <script src="js/script.js"></script>
+    
+    <div id="mode-toggle" onclick="toggleMode()">🌙</div> <!-- Toggle mode button -->
 </body>
 </html>
